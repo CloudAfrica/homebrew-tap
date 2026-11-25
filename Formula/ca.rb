@@ -5,13 +5,13 @@
 class Ca < Formula
   desc "CloudAfrica command-line interface"
   homepage "https://github.com/CloudAfrica/cloudafrica-cli"
-  version "0.10.0"
+  version "0.10.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.0/cloudafrica-cli_0.10.0_darwin_amd64.tar.gz"
-      sha256 "55431cc27e9e524be92e6549222cb493c67c8b3d18a1edb3180593ccbda030bf"
+      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.1/cloudafrica-cli_0.10.1_darwin_amd64.tar.gz"
+      sha256 "ab9a7daac0570e7bb71fd6818f0bbde4cad6021d7ba7fd3bc312f62cf534ab01"
 
       define_method(:install) do
         bin.install "ca"
@@ -19,8 +19,8 @@ class Ca < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.0/cloudafrica-cli_0.10.0_darwin_arm64.tar.gz"
-      sha256 "7f78fc9bd8ce64c448d5fc1de241fead6817bfc56e4c12e62222fa498b5a852e"
+      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.1/cloudafrica-cli_0.10.1_darwin_arm64.tar.gz"
+      sha256 "73da7bee42a2133505de763097e18bf9113e5590012b8385f0685f2c8c8bc57c"
 
       define_method(:install) do
         bin.install "ca"
@@ -31,16 +31,16 @@ class Ca < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.0/cloudafrica-cli_0.10.0_linux_amd64.tar.gz"
-      sha256 "f83a71e4fef2959f4a43f29f9b1f90652f81c47e3029f9ed3c08ffb8c811aca9"
+      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.1/cloudafrica-cli_0.10.1_linux_amd64.tar.gz"
+      sha256 "2c7652c131c0995620430d2c502e94eaafd54bc2b7c0df4b90c503b322fd9821"
       define_method(:install) do
         bin.install "ca"
         bin.install_symlink "ca" => "cloudafrica"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.0/cloudafrica-cli_0.10.0_linux_arm64.tar.gz"
-      sha256 "ba0a7586900ef33b445293a22a34d14938b68a3be165bd09c169b0ed36f6fe54"
+      url "https://github.com/CloudAfrica/cloudafrica-cli/releases/download/v0.10.1/cloudafrica-cli_0.10.1_linux_arm64.tar.gz"
+      sha256 "7859131e4f0bb0d1395b552e15848a32443bfe431964019cdc89f605e4b902ce"
       define_method(:install) do
         bin.install "ca"
         bin.install_symlink "ca" => "cloudafrica"
